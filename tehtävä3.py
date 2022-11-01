@@ -22,8 +22,6 @@ class Hissi():
         self.kerros -= 1
         print(f'Olet kerroksessa {self.kerros}')
 
-
-
 class Talo():
     def __init__(self, alin, ylin, hissi_maara):
         self.alin = alin
@@ -34,10 +32,19 @@ class Talo():
             self.hissit.append(Hissi(self.alin, self.ylin))
 
     def aja_hissia(self, hissi_nro, kohdekerros):
-        hissukka = self.hissit[hissi_nro]
-        hissukka.siirry_kerrokseen(kohdekerros)
+        self.hissit[hissi_nro].siirry_kerrokseen(kohdekerros)
+
+    def palohalytys(self):
+        for hissukka in range(len(self.hissit)):
+            self.aja_hissia(hissukka, self.alin)
+
 
 talo1= Talo(0,9,2)
 
 talo1.aja_hissia(1,5)
+talo1.aja_hissia(2,3)
+
+talo1.palohalytys()
+
+
 
