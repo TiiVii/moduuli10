@@ -67,7 +67,3 @@ while not kilpailu1.kilpailu_ohi():
     kilpailu1.tunti_kuluu()
     kilpailu1.tulosta_tilanne()
 
-#tee autot paaohjelmassa t.aliisa
-#looppaa tuntia niin pitkään, kunne km matka on saavutettu
-
-#when race over print ja silleen jeejee
